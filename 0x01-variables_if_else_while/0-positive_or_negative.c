@@ -3,23 +3,28 @@
 #include <stdio.h>
 
 /**
- * main - print a random number to show whether its positive or negative
+ * main - print a random number
  *
- * Return: Always 0
+ * Return: 0
  */
+
 int main(void)
 {
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX /	2;
-
+	n = rand() - RAND_MAX / 2;
 	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
-	else
-		printf("%d is zero\n", n);
-
+{
+	printf("is positive");
+}
+	if (n == 0)
+{
+	printf("is zero");
+}
+	if (n < 0)
+{
+	printf("is negative");
+}
 	return (0);
 }
